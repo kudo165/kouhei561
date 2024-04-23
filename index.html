@@ -65,6 +65,24 @@
         <p>時鳥</p>
         <a href="#" class="button">Ieyasu Tokugawa</a>
     </div>
+    <div class="slot" id="slot">
+        <!-- ここにスロットのコンテンツが追加されます -->
+    </div>
+    <button onclick="addContent()">Add Content</button>
+
+    <script>
+        function addContent() {
+            // ランダムなIDを生成
+            var id = 'content_' + Math.random().toString(36).substr(2, 9);
+            // スロットに追加する新しい要素を作成
+            var newContent = document.createElement('div');
+            newContent.innerHTML = '<p>This is new content added dynamically.</p>';
+            // 新しい要素にIDを設定
+            newContent.setAttribute('id', id);
+            // スロットに新しいコンテンツを追加
+            document.getElementById('slot').appendChild(newContent);
+        }
+    </script>
     <footer>
         &copy; 2024 Stylish Web Page. All Rights Reserved.
     </footer>
